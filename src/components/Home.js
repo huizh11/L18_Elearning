@@ -1,4 +1,4 @@
-import featImg from "../assets/img-main.jpg";
+import featImg from "../assets/RPimage.png";
 
 export default function Home({ title }) {
   return (
@@ -13,11 +13,11 @@ export default function Home({ title }) {
       <p>
         This is a fictitious company and conference created by{" "}
         <a
-          href="https://www.linkedin.com/feed/"
+          href="https://www.linkedin.com/school/republic-polytechnic/posts/?feedView=all"
           target="_blank"
           rel="noreferrer noopener"
         >
-          LinkedIn Corporation, or its affiliates
+          Republic Polytechnic
         </a>
         , solely for the creation and development of educational training
         materials. Any resemblance to real products or services is purely
