@@ -1,13 +1,12 @@
 export default function About() {
   return (
     <div className="container">
-      <h1>Technology and Business Solutions</h1>
+      <h1>Why choose School Of Infocomm?</h1>
       <p>
-        Red30 Tech is the leading source of secure, fully customizable
-        technology and business solutions. We cater to those who need scalable
-        results that are sustainable for their company and the planet. With the
-        ever-evolving technology landscape, we want to be your go-to source for
-        business technology.
+        The School of Infocomm equips students with strong foundations in information technology 
+        and practical skills that are highly relevant in today’s digital world. 
+        Our programmes focus on hands-on learning, allowing students to apply what they learn through real-world 
+        projects and industry-aligned modules.
       </p>
       <p>
         Our mission is to provide technology and business-driven solutions that
