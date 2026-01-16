@@ -1,30 +1,35 @@
 // FavouritesContext.js
-import { createContext, useContext, useMemo, useState } from "react";
+import { createContext, useContext, useMemo, useState, useCallback } from "react";
 
 const FavouritesContext = createContext(null);
 
 export function FavouritesProvider({ children }) {
-  const [favs, setFavs] = useState([]); 
+  const [favs, setFavs] = useState([]);
 
-
-  function toggleFavourite(item) {
+  const toggleFavourite = useCallback((item) => {
     setFavs((prev) => {
       const exists = prev.some(
         (x) => x.diplomaId === item.diplomaId && x.moduleId === item.moduleId
       );
-      if (exists)
+
+      if (exists) {
         return prev.filter(
-          (x) => !(x.diplomaId === item.diplomaId && x.moduleId === item.moduleId)
+          (x) =>
+            !(x.diplomaId === item.diplomaId && x.moduleId === item.moduleId)
         );
+      }
+
       return [...prev, item];
     });
-  }
+  }, []);
 
-  function isFavourite(item) {
-    return favs.some(
-      (x) => x.diplomaId === item.diplomaId && x.moduleId === item.moduleId
-    );
-  }
+  const isFavourite = useCallback(
+    (item) =>
+      favs.some(
+        (x) => x.diplomaId === item.diplomaId && x.moduleId === item.moduleId
+      ),
+    [favs]
+  );
 
   const value = useMemo(
     () => ({ favs, toggleFavourite, isFavourite }),

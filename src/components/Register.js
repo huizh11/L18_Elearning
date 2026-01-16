@@ -18,11 +18,6 @@ export default function Register() {
   const [diplomaId, setDiplomaId] = useState(preDiplomaId);
   const [moduleId, setModuleId] = useState(preModuleId);
 
-  const selectedDiploma = useMemo(
-    () => diplomas.find((d) => d.id === diplomaId),
-    [diplomaId, diplomas]
-  );
-
   function handleSubmit(event) {
     event.preventDefault();
 

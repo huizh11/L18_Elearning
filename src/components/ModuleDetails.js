@@ -1,5 +1,5 @@
 // ModuleDetails.js
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getModule, getDiploma } from "./api";
 
 export default function ModuleDetails() {
